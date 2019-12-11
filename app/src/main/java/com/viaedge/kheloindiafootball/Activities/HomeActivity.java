@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.viaedge.kheloindiafootball.Adapters.HomePager;
 import com.viaedge.kheloindiafootball.R;
@@ -25,6 +26,7 @@ public class HomeActivity extends AppCompatActivity implements TabLayout.OnTabSe
     TabLayout tabLayout;
     ViewPager viewPager;
     RelativeLayout playerInfo;
+    NavigationView navigationView;
     TextView profile,explore,fixtures,team,stats;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +47,14 @@ public class HomeActivity extends AppCompatActivity implements TabLayout.OnTabSe
         fixtures = findViewById(R.id.fixtures);
         stats = findViewById(R.id.stats);
         team = findViewById(R.id.team);
+        playerInfo = findViewById(R.id.playerInfo);
+        navigationView = findViewById(R.id.navigationView);
         HomePager adapter = new HomePager(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         tabLayout.addOnTabSelectedListener(this);
         tabLayout.setupWithViewPager(viewPager);
         LinearLayout logout = findViewById(R.id.logout);
+
         logout.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this,LoginActivity.class);
             startActivity(intent);
@@ -77,6 +82,10 @@ public class HomeActivity extends AppCompatActivity implements TabLayout.OnTabSe
         stats.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this,DefaultActivity.class);
             intent.putExtra("fragment","match");
+            startActivity(intent);
+        });
+        playerInfo.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this,ProfileActivity.class);
             startActivity(intent);
         });
 
