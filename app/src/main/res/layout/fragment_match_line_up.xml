@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MatchLineUp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <TextView
+            android:id="@+id/team1Name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/titillium_web"
+            android:text="MANCHESTER UNITED"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/team2Name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/titillium_web"
+            android:text="ARSENAL"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/matchLineupRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

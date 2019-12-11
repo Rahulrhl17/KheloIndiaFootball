@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ExploreFragment">
+
+    <TextView
+        android:id="@+id/lookingfor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/titillium_web_light"
+        android:text="Looking for A Player ? "
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lookingfor"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_centerHorizontal="true">
+
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/playerradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Player"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/titillium_web"
+            android:layout_marginEnd="50dp"
+            android:textSize="16sp"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/teamradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Team"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/titillium_web"
+            android:layout_marginStart="50dp"
+            android:textSize="16sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/playersearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/radiogroup"
+        >
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/playerSearchLayout"
+        style="@style/TextInputLayoutAppearance"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Name or Unique Id"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/playerSearchText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playersearchbutton"
+        style="@style/Button"
+        android:layout_below="@id/playerSearchLayout"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/titillium_web"
+        android:text="Search"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:backgroundTint="@color/colorAccent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/teamsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/radiogroup"
+        android:visibility="gone">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/teamSearchLayout"
+            style="@style/TextInputLayoutAppearance"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Team Name or Team Id"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/teamSearchText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/teamsearchbutton"
+            style="@style/Button"
+            android:layout_below="@id/playerSearchLayout"
+            android:layout_width="100dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/titillium_web"
+            android:text="Search"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:backgroundTint="@color/colorAccent" />
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

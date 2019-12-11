@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginStart="10dp">
+
+    <TextView
+        android:id="@+id/fixtures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/titillium_web_light"
+        android:text="FIXTURES"
+        android:letterSpacing="0.1"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/explore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/titillium_web_light"
+        android:text="EXPLORE"
+        android:letterSpacing="0.1"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/fixtures"/>
+
+    <TextView
+        android:id="@+id/aboutus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/titillium_web_light"
+        android:text="ABOUT US"
+        android:letterSpacing="0.1"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/explore"/>
+
+    <LinearLayout
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/exit"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/titillium_web_light"
+            android:text="LOGOUT"
+            android:letterSpacing="0.1"
+            />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

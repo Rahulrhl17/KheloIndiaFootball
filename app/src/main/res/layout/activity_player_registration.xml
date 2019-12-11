@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PlayerRegistration">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        >
+
+        <ImageView
+            android:id="@+id/goback"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+
+            android:src="@drawable/left">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/titillium_web_light"
+            android:text="Register As Player"
+            android:textColor="@color/black"
+            android:textSize="26sp" />
+
+    </RelativeLayout>
+
+    <com.kofigyan.stateprogressbar.StateProgressBar
+        android:id="@+id/stateprogressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        app:spb_maxStateNumber="three"
+        app:spb_stateSize="35dp"
+        android:layout_marginTop="20dp"
+        app:spb_stateBackgroundColor="#858585"
+        app:spb_currentStateDescriptionColor="@color/colorAccent"
+        app:spb_stateNumberBackgroundColor="@color/white"
+        app:spb_stateNumberForegroundColor="@color/white"
+        app:spb_stateDescriptionColor="#858585"
+        app:spb_stateForegroundColor="@color/colorAccent"
+        />
+
+    <FrameLayout
+        android:id="@+id/registerframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/stateprogressbar"
+        android:layout_marginTop="10dp"/>
+
+
+</RelativeLayout>

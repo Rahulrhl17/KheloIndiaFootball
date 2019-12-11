@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.MatchViewFragment">
+
+    <TextView
+        android:id="@+id/leagueName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/titillium_web_light"
+        android:textColor="@color/black"
+        android:text="LEAGUE NAME"
+        android:letterSpacing="0.1"
+        />
+
+    <TextView
+        android:id="@+id/locationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leagueName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="13sp"
+        android:fontFamily="@font/titillium_web_light"
+        android:text="Venue Name"
+        android:letterSpacing="0.1"
+        />
+
+    <LinearLayout
+        android:id="@+id/matchInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/locationText"
+        android:layout_margin="10dp"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/team1info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/team1Logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/default_logo"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/team1Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manchester\nUnited"
+                android:textAlignment="center"
+                android:lineSpacingExtra="-5dp"
+                android:layout_below="@+id/team1Logo"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/titillium_web"
+                android:textAllCaps="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/matchStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:id="@+id/scoreLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+                <TextView
+                    android:id="@+id/team1Score"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/titillium_web"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:text="3"/>
+                <TextView
+                    android:id="@+id/dash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/titillium_web"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/team2Score"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/titillium_web"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:text="2"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/dateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scoreLayout"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/titillium_web_light"
+                android:textAlignment="center"
+                android:text="26 Jan 6:00 PM"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/team2info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/team2Logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/default_logo"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/team2Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARSENAL"
+                android:textAlignment="center"
+                android:lineSpacingExtra="-5dp"
+                android:layout_below="@+id/team2Logo"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/titillium_web"
+                android:textAllCaps="true"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextColor="@color/black"
+        app:tabSelectedTextColor="@color/colorAccent"
+        android:background="@color/white"
+        app:tabTextAppearance="@style/tab_text"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorAccent"
+        android:layout_below="@+id/matchInfo"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Line Up"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Highlights"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multimedia"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/matchViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLayout"/>
+
+
+</RelativeLayout>
