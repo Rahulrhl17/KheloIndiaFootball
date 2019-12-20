@@ -27,13 +27,19 @@ public class HomeActivity extends AppCompatActivity implements TabLayout.OnTabSe
     ViewPager viewPager;
     RelativeLayout playerInfo;
     NavigationView navigationView;
-    TextView profile,explore,fixtures,team,stats;
+    TextView profile,explore,fixtures,team,stats,playername;
+    String firstname,lastname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Bundle bundle = getIntent().getExtras();
+        if(bundle!=null){
+            firstname = bundle.getString("firstname");
+            lastname = bundle.getString("lastname");
+        }
         drawerLayout = findViewById(R.id.drawerLayout);
         tabLayout = findViewById(R.id.tabLayout);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
@@ -54,7 +60,8 @@ public class HomeActivity extends AppCompatActivity implements TabLayout.OnTabSe
         tabLayout.addOnTabSelectedListener(this);
         tabLayout.setupWithViewPager(viewPager);
         LinearLayout logout = findViewById(R.id.logout);
-
+        playername = findViewById(R.id.playername);
+        playername.setText(firstname + " "+lastname);
         logout.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this,LoginActivity.class);
             startActivity(intent);

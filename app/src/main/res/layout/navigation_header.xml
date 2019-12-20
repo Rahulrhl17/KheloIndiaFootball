@@ -18,12 +18,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/accountType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/titillium_web"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            />
+
         <RelativeLayout
             android:id="@+id/playerInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp">
+
             <ImageView
                 android:id="@+id/playerImage"
                 android:layout_width="90dp"
@@ -31,11 +44,13 @@
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/default_logo"/>
             <TextView
+                android:id="@+id/playername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:layout_below="@+id/playerImage"
                 android:textSize="16sp"
+                android:layout_marginTop="5dp"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/titillium_web"
                 android:text="PLAYER NAME"
@@ -81,12 +96,14 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/bottomButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp"
-            android:weightSum="3">
+            android:weightSum="3"
+            android:visibility="visible">
             <TextView
                 android:id="@+id/stats"
                 android:layout_width="0dp"
@@ -133,6 +150,18 @@
                 android:textAlignment="center"/>
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="Want to Participate? Sign Up."
+            android:fontFamily="@font/titillium_web"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone"/>
 
     </RelativeLayout>
 

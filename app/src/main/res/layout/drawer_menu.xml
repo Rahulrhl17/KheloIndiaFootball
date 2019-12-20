@@ -31,6 +31,21 @@
         android:layout_below="@id/fixtures"/>
 
     <TextView
+        android:id="@+id/manageTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/titillium_web_light"
+        android:text="MANAGE TEAM"
+        android:letterSpacing="0.1"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/explore"
+        android:visibility="gone"/>
+
+
+    <TextView
         android:id="@+id/aboutus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +56,8 @@
         android:text="ABOUT US"
         android:letterSpacing="0.1"
         android:layout_marginTop="30dp"
-        android:layout_below="@id/explore"/>
+        android:layout_below="@id/explore"
+        android:visibility="visible"/>
 
     <LinearLayout
         android:id="@+id/logout"
